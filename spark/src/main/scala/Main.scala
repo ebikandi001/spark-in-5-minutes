@@ -38,24 +38,4 @@ object Main extends App {
   val sparkConf = new SparkConf().setAppName("Spark-HBase").setMaster("local[*]")
   sparkConf.set("spark.executor.cores", "5")
   val sc = new SparkContext(sparkConf)
-  val csv = sc.textFile("/home/oskar/Downloads/battles.csv")
-  val data = csv.map(line => line.split(","))
-  val attacker_list = data.map(Arrays => battle(Arrays)).map(battle => (battle.attacker_1, battle.defender_1))
-
-  attacker_list.map((tuple: (String, String)) => ((tuple._1, tuple._2), 1))
-    .reduceByKey { case (accumulatedValue, currentValue) => accumulatedValue + currentValue }
-    .foreach { case (key, numberOfTimes) => println(key + ":" + numberOfTimes) }
-
-  val sqlContext = new SQLContext(sc)
-
-  val df = sqlContext.read
-    .format("com.databricks.spark.csv")
-    .option("header", "true") // Use first line of all files as header
-    .option("inferSchema", "true") // Automatically infer data types
-    .load("/home/oskar/Downloads/character-deaths.csv")
-
-  df.registerTempTable("deaths")
-  sqlContext.sql("SELECT * FROM deaths WHERE Allegiances='Stark'").show()
-
-
 }
