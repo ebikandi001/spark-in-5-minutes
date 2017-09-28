@@ -1,0 +1,53 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '2.0.0'
+    id 'project-report'
+}
+
+version 'latest'
+
+apply plugin: 'scala'
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+    maven {
+        url 'https://repository.apache.org/content/repositories/snapshots/'
+    }
+    maven {
+        credentials {
+            username "ferrari"
+            password "Kmgi12345!"
+        }
+        url 'https://maven-ci.veinteractive.net/content/groups/public/'
+    }
+    maven {
+        url 'http://conjars.org/repo/'
+    }
+
+    maven {
+        url 'https://repository.cloudera.com/artifactory/cloudera-repos/'
+    }
+    maven {
+        url 'http://clojars.org/repo/'
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.scala-lang:scala-library:" + "2.10.6"
+    compile "org.scala-lang:scala-reflect:" + "2.10.6"
+    compile "org.scala-lang:scala-compiler:" + "2.10.6"
+    compile "org.apache.spark:spark-core_2.10:" + "1.6.2"
+    compile "org.apache.spark:spark-sql_2.10:" + "1.6.2"
+    compile "com.databricks:spark-csv_2.10:1.5.0"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.1'
+}

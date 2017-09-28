@@ -1,0 +1,31 @@
+products:
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$$anonfun$1.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$$anonfun$2.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$$anonfun$3.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$$anonfun$4.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$$anonfun$5.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$$anonfun$6.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$battle$.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$battle.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main$delayedInit$body.class
+   src/main/scala/Main.scala -> build/classes/scala/main/Main.class
+binary dependencies:
+   src/main/scala/Main.scala -> /home/oskar/.gradle/caches/modules-2/files-2.1/org.apache.spark/spark-core_2.10/1.6.2/a7db3273d383833d76370fd4f6806e8e7bfbc42/spark-core_2.10-1.6.2.jar
+   src/main/scala/Main.scala -> /home/oskar/.gradle/caches/modules-2/files-2.1/org.apache.spark/spark-sql_2.10/1.6.2/945fe5590a3a2b81058384d4ef1dc971214721ad/spark-sql_2.10-1.6.2.jar
+   src/main/scala/Main.scala -> /home/oskar/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.6/421989aa8f95a05a4f894630aad96b8c7b828732/scala-library-2.10.6.jar
+   src/main/scala/Main.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+source dependencies:
+external dependencies:
+class names:
+   src/main/scala/Main.scala -> Main
+   src/main/scala/Main.scala -> Main$
+   src/main/scala/Main.scala -> Main$$anonfun$1
+   src/main/scala/Main.scala -> Main$$anonfun$2
+   src/main/scala/Main.scala -> Main$$anonfun$3
+   src/main/scala/Main.scala -> Main$$anonfun$4
+   src/main/scala/Main.scala -> Main$$anonfun$5
+   src/main/scala/Main.scala -> Main$$anonfun$6
+   src/main/scala/Main.scala -> Main$battle
+   src/main/scala/Main.scala -> Main$battle$
+   src/main/scala/Main.scala -> Main$delayedInit$body
